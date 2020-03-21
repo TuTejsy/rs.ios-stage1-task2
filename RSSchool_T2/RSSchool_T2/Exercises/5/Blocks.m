@@ -5,19 +5,11 @@
     BlockC _block;
 }
 
-- (void) setBlockA: (BlockA) block {
-   // self.blockA = [block copy];
-};
-
 - (BlockA) blockA {
     return [^(NSArray *array) {
         _array = [array copy];
     } copy];
 }
-
-- (void) setBlockB: (BlockB) block {
-  //  self.blockB = [block copy];
-};
 
 - (BlockB) blockB {
     return [^(Class class) {
@@ -68,12 +60,6 @@
 - (void) setBlockC: (BlockC) block {
     _block = [block copy];
 };
-
-- (BlockC) blockC {
-    return ^(NSObject *result) {
-         NSLog(@"NSObject");
-    };
-}
 
 @end
 
